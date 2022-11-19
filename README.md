@@ -1,10 +1,12 @@
 # esptool.js
 
-[![npm](https://img.shields.io/npm/v/@toit/esptool.js.svg?style=flat-square)](https://www.npmjs.org/package/@toit/esptool.js)
-[![npm](https://img.shields.io/npm/l/@toit/esptool.js.svg?style=flat-square)](https://www.npmjs.org/package/@toit/esptool.js)
-[![typedoc](https://img.shields.io/badge/-typedoc-blue?style=flat-square)](https://toitware.github.io/esptool.js)
-[![GitHub](https://img.shields.io/github/stars/toitware/esptool.js.svg?style=flat-square)](https://github.com/toitware/esptool.js)
+[![Version](https://img.shields.io/npm/v/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
+[![Downloads per month](https://img.shields.io/npm/dm/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
+[![typedoc](https://img.shields.io/badge/-typedoc-blue)](https://toitware.github.io/esptool.js)
 
+[![MIT](https://img.shields.io/github/license/openhaptics/esptool.ts)](/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/openhaptics/esptool.ts)](https://github.com/openhaptics/esptool.ts/graphs/contributors)
+[![GitHub](https://img.shields.io/github/stars/openhaptics/esptool.ts.svg)](https://github.com/toitware/esptool.js)
 
 TypeScript port of the esptool.
 
