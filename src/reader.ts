@@ -53,6 +53,7 @@ export class Reader {
     if (this.reader !== undefined) {
       try {
         await this.reader.cancel();
+        // eslint-disable-next-line no-empty
       } catch (e) {}
     }
     try {
@@ -103,6 +104,7 @@ export class Reader {
           // on a transient error, close the current reader and retry.
           try {
             await reader.cancel();
+            // eslint-disable-next-line no-empty
           } catch (e) {}
           reader.releaseLock();
           this.reader = undefined;
@@ -113,6 +115,7 @@ export class Reader {
       if (this.reader !== undefined) {
         try {
           await this.reader.cancel();
+          // eslint-disable-next-line no-empty
         } catch (e) {}
         this.reader.releaseLock();
         this.reader = undefined;

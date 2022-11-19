@@ -2,46 +2,43 @@
 root: true
 parser: "@typescript-eslint/parser" # Specifies the ESLint parser
 parserOptions:
-  ecmaVersion: 6 # Allows for the parsing of modern ECMAScript features
+  project: "./tsconfig.json"
+  ecmaVersion: 8 # Allows for the parsing of modern ECMAScript features
   sourceType: module # Allows for the use of imports
   ecmaFeatures:
-    jsx: true # Allows for the parsing of JSX
+    impliedStrict: true
+    experimentalObjectRestSpread: true
+  allowImportExportEverywhere: true
 
-# TypeScript specific config here.
-overrides:
-  - files: [ "*.ts", "*.tsx" ]
-    parserOptions:
-      project: "./tsconfig.json"
-    extends:
-      # Uses the recommended rules from the @typescript-eslint/eslint-plugin
-      - plugin:@typescript-eslint/recommended
-      - plugin:@typescript-eslint/recommended-requiring-type-checking
-
-    rules:
-      # This fails for generics with FunctionalComponent, and is not necessary
-      # because other TS rules cover it anyway.
-      react/prop-types: "off"
-
-      "no-unused-vars": "off" # required for the typescript lint
-      # I decided to leave `args` at the deafult `after-used` but it might make
-      # sense to set this to `none`.
-      # https://eslint.org/docs/rules/no-unused-vars#args
-      "@typescript-eslint/no-unused-vars":  ["warn", { "vars": "local", "args": "after-used" }]
-
-      "@typescript-eslint/no-empty-function": "off"
-      "@typescript-eslint/no-var-requires": "off"
-
-
-settings:
-  react:
-    version: detect
+plugins:
+  - "@typescript-eslint"
 
 extends:
-  - prettier
+  - eslint:recommended
+  - plugin:eslint-comments/recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:@typescript-eslint/recommended-requiring-type-checking
+  - plugin:import/recommended
+  - plugin:import/typescript
   # Enables eslint-plugin-prettier and eslint-config-prettier. This will display
   # prettier errors as ESLint errors. Make sure this is always the last
   # configuration in the extends array.
   - plugin:prettier/recommended
+  - prettier
 
 # Override rules for all files here.
-rules: {}
+rules:
+  no-unused-vars: off # required for the typescript lint
+  "@typescript-eslint/explicit-module-boundary-types": off
+  "@typescript-eslint/no-explicit-any": off
+  "@typescript-eslint/no-non-null-assertion": off
+  # I decided to leave `args` at the deafult `after-used` but it might make
+  # sense to set this to `none`.
+  # https://eslint.org/docs/rules/no-unused-vars#args
+  "@typescript-eslint/no-unused-vars":
+    - warn
+    - vars: local
+      args: after-used
+      argsIgnorePattern: ^_
+  "@typescript-eslint/no-empty-function": off
+  "@typescript-eslint/no-var-requires": off
