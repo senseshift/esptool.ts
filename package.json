@@ -2,6 +2,7 @@
   "name": "esptool.ts",
   "version": "0.10.0",
   "description": "Updated TypeScript port of the esptool",
+  "homepage": "https://github.com/openhaptics/esptool.ts",
   "repository": {
     "type": "git",
     "url": "git@github.com:openhaptics/esptool.ts.git"
@@ -43,9 +44,7 @@
     "webserial",
     "esp32",
     "esp8266",
-    "serial",
-    "toit",
-    "toitware"
+    "serial"
   ],
   "devDependencies": {
     "@types/w3c-web-serial": "^1.0.3",
