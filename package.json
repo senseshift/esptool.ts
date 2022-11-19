@@ -1,20 +1,38 @@
 {
-  "name": "@toit/esptool.js",
-  "version": "0.9.1",
-  "description": "TypeScript port of the esptool",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "repository": "git@github.com:toitware/esptool.js.git",
-  "author": "Toitware ApS",
+  "name": "esptool.ts",
+  "version": "0.10.0",
+  "description": "Updated TypeScript port of the esptool",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:openhaptics/esptool.ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openhaptics/esptool.ts/issues"
+  },
+  "author": "Toitware ApS and OpenHaptics Contributors",
+  "contributors": [
+    "Leonid Meleshin <hello@leon0399.ru> (https://leon0399.ru/)"
+  ],
   "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.cjs.d.ts",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
   "scripts": {
+    "prepare": "husky install",
+    "preinstall": "npx only-allow yarn",
     "build": "tsc -b tsconfig.json",
     "watch": "tsc -b tsconfig.json -w",
     "clean": "tsc -b tsconfig.json --clean",
-    "lint": "eslint 'src/*.{js,ts,tsx}' --max-warnings=0",
-    "doc": "typedoc",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "prepare": "husky install"
+    "lint": "eslint 'src/*.{js,ts}' --max-warnings=0",
+    "lint:fix": "yarn lint --fix",
+    "lint:format": "prettier --write",
+    "lint:types": "tsc -p tsconfig.json --noEmit",
+    "doc": "typedoc"
   },
   "files": [
     "build",
@@ -40,6 +58,6 @@
     "husky": "^8.0.2",
     "prettier": "^2.3.1",
     "typedoc": "^0.21.0",
-    "typescript": "^4.3.4"
+    "typescript": "^4.9.3"
   }
 }
