@@ -376,6 +376,7 @@ export class EspLoader {
   }
 
   private async getResponse(opcode: number, timeout: number = DEFAULT_TIMEOUT): Promise<commandResult> {
+    // eslint-disable-next-line no-useless-catch
     try {
       const reply = await this.reader.packet(12, timeout);
       if (this.options.debug) {

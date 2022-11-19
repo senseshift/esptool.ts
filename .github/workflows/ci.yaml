@@ -1,47 +1,30 @@
 on:
-  push:
   pull_request:
-  release:
-    types: [published]
+  push:
+    branches: [master]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
 
 jobs:
-  ci:
-    name: ci
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: install node v14
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14
+      - uses: actions/checkout@v1
+      - name: Set up Node 16
+        uses: actions/setup-node@v3
+        with:
+          cache: yarn
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
 
-    - name: install
-      run: yarn install
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
-    - name: eslint
-      run: yarn lint
+      - name: Lint code
+        run: yarn lint
 
-    - name: Update version in package.json (Release only)
-      if: github.event_name == 'release'
-      run: yarn version --new-version $(echo ${{ github.event.release.tag_name }} | sed -e "s/v//gI") --no-git-tag-version
-
-    - name: build
-      run: yarn build
-
-    - name: build typedoc (Release only)
-      if: github.event_name == 'release'
-      run: yarn run doc
-
-    - name: Publish typedoc (Release only)
-      if: github.event_name == 'release'
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: gh-pages
-        folder: build/docs/
-
-    - name: Publish to npmjs.org (Release only)
-      if: github.event_name == 'release'
-      uses: JS-DevTools/npm-publish@v1
-      with:
-        token: ${{ secrets.NPM_LEON_ACCESS_TOKEN }}
-        package: ./package.json
+      - name: Check types
+        run: yarn lint:types

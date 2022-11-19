@@ -1,25 +1,37 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "es2017",
     "composite": false,
-    "outDir": "./build",
-    "rootDir": "./src",
-    "strict": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
+    "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "es2017"],
+    "lib": ["dom", "dom.iterable", "es2017", "es2019"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "rootDir": "./src",
+    "strict": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "target": "es2019",
     "typeRoots": [
+      "node_modules/@types",
       "src/@types",
     ],
   },
   "preset": "ts-jest",
+  "exclude": ["node_modules", "dist"],
   "include": [
     "src",
-  ]
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "transpiler": "ts-node/transpilers/swc-experimental"
+  }
 }
