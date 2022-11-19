@@ -6,6 +6,7 @@
     "outDir": "./build",
     "rootDir": "./src",
     "strict": true,
+    "strictNullChecks": false,
     "skipLibCheck": true,
     "sourceMap": true,
     "moduleResolution": "node",
@@ -15,7 +16,7 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "es2017"],
     "typeRoots": [
-      "src/@types",
+      "node_modules/@types",
     ],
   },
   "preset": "ts-jest",
