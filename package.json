@@ -1,6 +1,6 @@
 {
   "name": "esptool.ts",
-  "version": "0.10.0",
+  "version": "0.13.6",
   "description": "Updated TypeScript port of the esptool",
   "homepage": "https://github.com/openhaptics/esptool.ts",
   "repository": {
@@ -16,8 +16,8 @@
   ],
   "license": "MIT",
   "sideEffects": false,
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "husky install",
     "preinstall": "npx only-allow yarn",
@@ -32,7 +32,7 @@
     "build:docs": "typedoc"
   },
   "files": [
-    "build",
+    "dist",
     "README.md"
   ],
   "keywords": [
@@ -56,5 +56,8 @@
     "prettier": "^2.7.1",
     "typedoc": "^0.23.21",
     "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@types/w3c-web-serial": "^1.0.3"
   }
 }
