@@ -54,7 +54,7 @@
     "gh-pages": "^3.2.3",
     "husky": "^8.0.2",
     "prettier": "^2.7.1",
-    "typedoc": "^0.23.21",
+    "typedoc": "^0.24.1",
     "typescript": "^4.9.3"
   },
   "peerDependencies": {
