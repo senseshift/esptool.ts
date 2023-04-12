@@ -55,7 +55,7 @@
     "husky": "^8.0.2",
     "prettier": "^2.7.1",
     "typedoc": "^0.24.1",
-    "typescript": "^4.9.3"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
     "@types/w3c-web-serial": "^1.0.3"
