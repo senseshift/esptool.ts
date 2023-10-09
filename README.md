@@ -5,11 +5,11 @@
 
 [![Version](https://img.shields.io/npm/v/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
 [![Downloads per month](https://img.shields.io/npm/dm/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
-[![typedoc](https://img.shields.io/badge/-typedoc-blue)](https://openhaptics.github.io/esptool.ts)
+[![typedoc](https://img.shields.io/badge/-typedoc-blue)](https://senseshift.github.io/esptool.ts)
 
-[![MIT](https://img.shields.io/github/license/openhaptics/esptool.ts)](/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/openhaptics/esptool.ts)](https://github.com/openhaptics/esptool.ts/graphs/contributors)
-[![GitHub](https://img.shields.io/github/stars/openhaptics/esptool.ts.svg)](https://github.com/openhaptics/esptool.ts)
+[![MIT](https://img.shields.io/github/license/senseshift/esptool.ts)](/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/senseshift/esptool.ts)](https://github.com/senseshift/esptool.ts/graphs/contributors)
+[![GitHub](https://img.shields.io/github/stars/senseshift/esptool.ts.svg)](https://github.com/senseshift/esptool.ts)
 
 TypeScript port of the esptool.
 

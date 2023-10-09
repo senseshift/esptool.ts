@@ -2,15 +2,15 @@
   "name": "esptool.ts",
   "version": "0.13.6",
   "description": "Updated TypeScript port of the esptool",
-  "homepage": "https://github.com/openhaptics/esptool.ts",
+  "homepage": "https://github.com/senseshift/esptool.ts",
   "repository": {
     "type": "git",
-    "url": "git@github.com:openhaptics/esptool.ts.git"
+    "url": "git@github.com:senseshift/esptool.ts.git"
   },
   "bugs": {
-    "url": "https://github.com/openhaptics/esptool.ts/issues"
+    "url": "https://github.com/senseshift/esptool.ts/issues"
   },
-  "author": "Toitware ApS and OpenHaptics Contributors",
+  "author": "Toitware ApS and senseshift Contributors",
   "contributors": [
     "Leonid Meleshin <hello@leon0399.ru> (https://leon0399.ru/)"
   ],
