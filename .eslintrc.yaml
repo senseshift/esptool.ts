@@ -12,6 +12,7 @@ parserOptions:
 
 plugins:
   - "@typescript-eslint"
+  - header
 
 extends:
   - eslint:recommended
@@ -42,3 +43,11 @@ rules:
       argsIgnorePattern: ^_
   "@typescript-eslint/no-empty-function": off
   "@typescript-eslint/no-var-requires": off
+  "header/header":
+    - error
+    - line
+    - - " Copyright (C) 2021 Toitware ApS. All rights reserved."
+      - pattern: " Copyright \\(C\\) \\d{4} Leonid Meleshin. All rights reserved."
+        template: " Copyright (C) 2023 Leonid Meleshin. All rights reserved."
+      - " Use of this source code is governed by an MIT-style license that can be"
+      - " found in the LICENSE file."
