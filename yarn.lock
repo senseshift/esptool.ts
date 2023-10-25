@@ -107,9 +107,9 @@
   integrity sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==
 
 "@types/w3c-web-serial@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@types/w3c-web-serial/-/w3c-web-serial-1.0.3.tgz#9fd5e8542f74e464bb1715b384b5c0dcbf2fb2c3"
-  integrity sha512-R4J/OjqKAUFQoXVIkaUTfzb/sl6hLh/ZhDTfowJTRMa7LhgEmI/jXV4zsL1u8HpNa853BxwNmDIr0pauizzwSQ==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@types/w3c-web-serial/-/w3c-web-serial-1.0.5.tgz#09ed1265b642703c7f5556f36717bf4b1eddb10c"
+  integrity sha512-gpWNghA1RjPc92puT2HRRRFjv0MDVcpS9yTjJPLwCRU+w1YQTmJommTEL1w7l6Llq5/2cbzH1B4jHx/EP0PcjQ==
 
 "@typescript-eslint/eslint-plugin@^5.43.0":
   version "5.62.0"
