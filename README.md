@@ -1,29 +1,21 @@
-# esptool.ts
+# esptool.ts — TypeScript port of esptool
 
-[![Discord](https://img.shields.io/discord/966090258104062023?label=Discord&logo=discord)](https://discord.gg/YUtRKAqty2)
-[![Developer's Twitter](https://img.shields.io/twitter/follow/leon0399?color=%231DA1F2&label=Developer%27s%20Twitter&logo=twitter)](https://twitter.com/leon0399)
+This implementation is used in the [SenseShift Web Flasher](https://docs.senseshift.io/docs/firmware/web-flasher). Forked and modified from [`toitware/esptool.js`](https://github.com/toitware/esptool.js).
+
+<b>Get involved: [Discord](https://discord.gg/YUtRKAqty2) • [Website](https://senseshift.io) • [Issues](https://github.com/senseshift/senseshift-firmware/issues) • [Twitter](https://twitter.com/senseshiftio) • [Patreon](https://www.patreon.com/senseshift)</b>
+
+[![Discord Widget](https://discord.com/api/guilds/966090258104062023/widget.png?style=banner2)](https://discord.gg/YUtRKAqty2)
 
 [![Version](https://img.shields.io/npm/v/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
 [![Downloads per month](https://img.shields.io/npm/dm/esptool.ts.svg)](https://www.npmjs.org/package/esptool.ts)
-[![typedoc](https://img.shields.io/badge/-typedoc-blue)](https://senseshift.github.io/esptool.ts)
 
 [![MIT](https://img.shields.io/github/license/senseshift/esptool.ts)](/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/senseshift/esptool.ts)](https://github.com/senseshift/esptool.ts/graphs/contributors)
 [![GitHub](https://img.shields.io/github/stars/senseshift/esptool.ts.svg)](https://github.com/senseshift/esptool.ts)
 
-TypeScript port of the esptool.
-
-The [esptool](https://github.com/espressif/esptool) is originally written in python, and we have here ported it to TypeScript.
-
-This implementation is used in the [Toit Console](https://console.toit.io) to allow users to flash and monitor ESP32:
-
-[![Flash ESP32 with web serial](https://img.youtube.com/vi/ZsD59Tg2oCQ/0.jpg)](https://www.youtube.com/watch?v=ZsD59Tg2oCQ)
-
-Blog post on why we started this project: [Flash your ESP32 from the browser using Web Serial](https://blog.toit.io/flash-your-esp32-from-the-browser-using-web-serial-5eccb1483b9c).
-
 ## Example
 
-The code is written as a library, here is an examples showcasing how you can flash an ESP32 using the library:
+The code is written as a library. Here is an example showcasing how you can flash an ESP32 using the library:
 
 ```typescript
 export type Partition = {
@@ -73,21 +65,8 @@ try {
 }
 ```
 
-## Development
-To have automatic checks for copyright and MIT notices, run
-
-```
-$ git config core.hooksPath .githooks
-```
-
-If a file doesn't need a copyright/MIT notice, use the following to skip
-the check:
-```
-git commit --no-verify
-```
-
 ## Similar projects
 
+* [Toit esptool.js](https://github.com/toitware/esptool.js): original library, this one was forked and modified from.
 * [Espressif esptool-js](https://github.com/espressif/esptool-js): new project with similar purpose, but still not written as a proper library.
-
-* [Adafruit Adafruit ESPTool](https://github.com/adafruit/Adafruit_WebSerial_ESPTool): the source of inspration for us, big shout-out thanks for spearheading the effort. The implementation is written as a application and hard to use as a library.
+* [Adafruit Adafruit ESPTool](https://github.com/adafruit/Adafruit_WebSerial_ESPTool): the source of inspration for us, big shout-out thanks for spearheading the effort. The implementation is written as an application and hard to use as a library.
