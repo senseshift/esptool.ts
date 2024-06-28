@@ -2,7 +2,7 @@
 
 This implementation is used in the [SenseShift Web Flasher](https://docs.senseshift.io/docs/firmware/web-flasher). Forked and modified from [`toitware/esptool.js`](https://github.com/toitware/esptool.js).
 
-<b>Get involved: [Discord](https://discord.gg/YUtRKAqty2) • [Website](https://senseshift.io) • [Issues](https://github.com/senseshift/senseshift-firmware/issues) • [Twitter](https://twitter.com/senseshiftio) • [Patreon](https://www.patreon.com/senseshift)</b>
+<b>Get involved: 💬 [Discord](https://discord.gg/YUtRKAqty2) • 🌐 [Website](https://senseshift.io) • 🐛 [Issues](https://github.com/senseshift/rshapes/issues) • 📢 [Twitter](https://twitter.com/senseshiftio) • 💎 [Patreon](https://www.patreon.com/senseshift)</b>
 
 [![Discord Widget](https://discord.com/api/guilds/966090258104062023/widget.png?style=banner2)](https://discord.gg/YUtRKAqty2)
 
